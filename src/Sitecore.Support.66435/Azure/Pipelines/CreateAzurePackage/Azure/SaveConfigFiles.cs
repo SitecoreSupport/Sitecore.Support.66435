@@ -40,6 +40,7 @@ namespace Sitecore.Support.Azure.Pipelines.CreateAzurePackage.Azure
       this.MoveSectionToIncludeFile("api", sourceIncludeDir, args);
       this.MoveSectionToIncludeFile("experienceAnalytics", sourceIncludeDir, args);
       this.MoveSectionToIncludeFile("social", sourceIncludeDir, args);
+      this.MoveSectionToIncludeFile("sites", sourceIncludeDir, args);
       args.WebConfig.Save(FileUtil.MakePath(args.TargetWebSiteFolder.FullName, "web.config", '\\'), SaveOptions.None);
       XAttribute connectionStringsPath = this.GetConnectionStringsPath(args);
       if (connectionStringsPath != null)
